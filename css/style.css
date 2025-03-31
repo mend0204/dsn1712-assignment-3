@@ -102,11 +102,11 @@ header {
 }
 
 .services-grid article {
-  background-color: #fff;
-  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #fff;
+  padding: 16px;
 }
 
 #services h2 {
@@ -127,12 +127,12 @@ header {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  border: 1px solid #000;
 }
 
 .btn:hover {
   background: #fff;
   color: #000;
-  border: 1px solid #000;
 }
 
 
@@ -156,18 +156,30 @@ header {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 
+  "img1 img1 img1 img2 img2 img2"
+  "img3 img3 img4 img4 img5 img5";
   margin-bottom: 40px;
 }
 
-.work-grid img:nth-child(1), 
-.work-grid img:nth-child(2) {
-  grid-column: span 3;
+.work-grid img:nth-child(1) {
+  grid-area: img1;
 }
 
-.work-grid img:nth-child(3), 
-.work-grid img:nth-child(4), 
+.work-grid img:nth-child(2) {
+  grid-area: img2;
+}
+
+.work-grid img:nth-child(3) {
+  grid-area: img3;
+}
+
+.work-grid img:nth-child(4) {
+  grid-area: img4;
+}
+
 .work-grid img:nth-child(5) {
-  grid-column: span 2;
+  grid-area: img5;
 }
 
 
